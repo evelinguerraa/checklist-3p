@@ -30,8 +30,8 @@
     background:var(--ground);
     color:var(--text);
     font-family:var(--sans);
-    font-size:16px;
-    line-height:1.6;
+    font-size:17.5px;
+    line-height:1.62;
     -webkit-font-smoothing:antialiased;
   }
 
@@ -48,7 +48,7 @@
   .progreso-inner{ max-width:660px; margin:0 auto; display:flex; align-items:center; gap:14px; }
   .barra{ flex:1; height:5px; background:var(--surface-2); border-radius:99px; overflow:hidden; }
   .barra span{ display:block; height:100%; width:0%; background:var(--grad-full); border-radius:99px; transition:width .35s cubic-bezier(.4,0,.2,1); }
-  .cuenta{ font-size:12px; font-weight:700; color:var(--muted); font-variant-numeric:tabular-nums; letter-spacing:.02em; white-space:nowrap; }
+  .cuenta{ font-size:13.5px; font-weight:800; color:var(--muted); font-variant-numeric:tabular-nums; letter-spacing:.02em; white-space:nowrap; }
 
   /* ---------- hero ---------- */
   header{ padding:34px 0 8px; text-align:center; }
@@ -60,9 +60,9 @@
   }
 
   h1{
-    font-size:clamp(30px,7.4vw,44px);
+    font-size:clamp(33px,8.4vw,48px);
     line-height:1.08; letter-spacing:-.035em; font-weight:900;
-    margin:0 0 18px; text-wrap:balance;
+    margin:0 0 20px; text-wrap:balance;
   }
   h1 em{
     font-style:normal;
@@ -70,12 +70,12 @@
     -webkit-background-clip:text; background-clip:text; color:transparent;
   }
 
-  .bajada{ color:var(--muted); font-size:16.5px; margin:0 auto; max-width:44ch; text-wrap:pretty; }
+  .bajada{ color:var(--muted); font-size:18px; margin:0 auto; max-width:44ch; text-wrap:pretty; }
 
   .como{
-    margin:30px 0 8px; padding:16px 18px;
+    margin:30px 0 8px; padding:18px 19px;
     background:var(--surface); border:1px solid var(--line);
-    border-radius:14px; font-size:14.5px; color:var(--muted); text-align:left;
+    border-radius:14px; font-size:16px; color:var(--muted); text-align:left; line-height:1.58;
   }
   .como b{ color:var(--text); font-weight:700; }
 
@@ -84,32 +84,32 @@
 
   .pilar-head{ display:flex; align-items:baseline; gap:13px; margin-bottom:6px; }
   .num{
-    font-size:40px; font-weight:900; letter-spacing:-.05em; line-height:1;
+    font-size:46px; font-weight:900; letter-spacing:-.05em; line-height:1;
     background:var(--grad-full); -webkit-background-clip:text; background-clip:text; color:transparent;
     flex:none;
   }
   .pilar-head h2{
-    font-size:24px; font-weight:900; letter-spacing:-.02em; margin:0;
+    font-size:28px; font-weight:900; letter-spacing:-.02em; margin:0;
   }
-  .pilar-sub{ color:var(--faint); font-size:14px; margin:0 0 18px 53px; }
+  .pilar-sub{ color:var(--faint); font-size:15.5px; margin:0 0 18px 58px; }
 
   .items{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:9px; }
 
   label.item{
     display:flex; gap:13px; align-items:flex-start;
-    padding:14px 16px; min-height:44px;
+    padding:17px 17px; min-height:52px;
     background:var(--surface); border:1px solid var(--line);
     border-radius:13px; cursor:pointer;
     transition:border-color .18s, background .18s;
-    font-size:15px; line-height:1.45;
+    font-size:17px; line-height:1.45;
   }
   label.item:hover{ border-color:#33334A; }
   label.item:focus-within{ outline:2px solid var(--azul); outline-offset:2px; }
   label.item input{ position:absolute; opacity:0; width:0; height:0; }
 
   .box{
-    flex:none; width:22px; height:22px; margin-top:1px;
-    border:2px solid #3A3A50; border-radius:7px;
+    flex:none; width:25px; height:25px; margin-top:1px;
+    border:2px solid #3A3A50; border-radius:8px;
     display:grid; place-items:center;
     transition:border-color .18s, background .18s;
   }
@@ -131,18 +131,19 @@
     font-size:11px; font-weight:800; letter-spacing:.2em; text-transform:uppercase;
     color:var(--faint); margin-bottom:10px;
   }
-  .card h3{ font-size:23px; font-weight:900; letter-spacing:-.02em; margin:0 0 14px; line-height:1.2; text-wrap:balance; }
-  .card p{ margin:0 0 13px; color:#C9C9D8; font-size:15.5px; }
+  .card h3{ font-size:26px; font-weight:900; letter-spacing:-.02em; margin:0 0 15px; line-height:1.2; text-wrap:balance; }
+  .card p{ margin:0 0 14px; color:#C9C9D8; font-size:17px; }
   .card p:last-child{ margin-bottom:0; }
   .card strong{ color:var(--text); }
 
   .fade{ animation:aparecer .4s cubic-bezier(.4,0,.2,1); }
   @keyframes aparecer{ from{ opacity:0; transform:translateY(8px); } to{ opacity:1; transform:none; } }
 
-  .espera{ color:var(--faint); text-align:center; font-size:15px; padding:8px 0; }
+  .espera{ color:var(--faint); text-align:center; font-size:16.5px; padding:8px 0; }
 
   /* ---------- cta ---------- */
   .cta{ margin-top:18px; display:flex; flex-direction:column; gap:11px; }
+  .cta[hidden]{ display:none; }
   .btn{
     display:flex; align-items:center; justify-content:center; gap:10px;
     padding:17px 22px; text-decoration:none; border-radius:13px;
@@ -261,6 +262,7 @@
   var wa = document.getElementById('wa');
 
   var TEL = '5493585130221';
+  function link(m){ return 'https://wa.me/' + TEL + '?text=' + encodeURIComponent(m); }
   var frase = {
     1: 'que estoy trabado en la P1: Plataforma',
     2: 'que estoy trabado en la P2: Presencia',
@@ -313,6 +315,7 @@
 
     if (marcados === 0){
       cuerpo.innerHTML = '<p class="espera">Tildá lo que ya tenés hecho y acá aparece dónde estás trabado.</p>';
+      wa.href = link('Hola Evelina! Vi tu Checklist 3P y quiero que hablemos 👋');
       cta.hidden = true;
       return;
     }
@@ -330,8 +333,7 @@
     cuerpo.firstChild.classList.add('fade');
     cta.hidden = false;
 
-    var msg = 'Hola Evelina! Hice el Checklist 3P y me dio ' + frase[falla] + '. Quiero que me cuentes cómo seguir 👋';
-    wa.href = 'https://wa.me/' + TEL + '?text=' + encodeURIComponent(msg);
+    wa.href = link('Hola Evelina! Hice el Checklist 3P y me dio ' + frase[falla] + '. Quiero que me cuentes cómo seguir 👋');
   }
 
   inputs.forEach(function(i){ i.addEventListener('change', pintar); });
